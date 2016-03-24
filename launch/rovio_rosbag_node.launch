@@ -4,9 +4,12 @@
   <param name="filter_config" value="$(find rovio)/cfg/rovio.info"/>
   <param name="camera0_config" value="$(find rovio)/cfg/euroc_cam0.yaml"/>
   <param name="camera1_config" value="$(find rovio)/cfg/euroc_cam1.yaml"/>
-  <param name="rosbag_filename" value="/home/michael/datasets/euroc/01_easy/dataset.bag"/>
+  <!-- <param name="rosbag_filename" value="/home/libing/rosbag/rovio/MH_01_easy.bag"/> -->
+  <param name="rosbag_filename" value="/home/libing/rosbag/rovio/MH_04_difficult.bag"/>
   <param name="imu_topic_name" value="/imu0"/>
   <param name="cam0_topic_name" value="/cam0/image_raw"/>
   <param name="cam1_topic_name" value="/cam1/image_raw"/>
   </node>
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find rovio)/rviz_cfg/rovio.rviz" />
 </launch>
